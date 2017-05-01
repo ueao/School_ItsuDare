@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     let daregaArray : [String] = ["僕が","先生が","先輩が","ガッキーが"]
     let doshitaArray : [String] = ["歌った","ダンスした","寝た","ライブした"]
     
+    //indexという変数を定義
     var index : Int = 0
     
     override func viewDidLoad() {
@@ -75,10 +76,11 @@ class ViewController: UIViewController {
         let doshitaIndex = Int(arc4random_uniform(4))
         
         //コンソールに出力して、それぞれの値を確かめる
-        NSLog("いつ: %d", itsuIndex)
-        NSLog("どこで: %d", dokodeIndex)
-        NSLog("だれが: %d", daregaIndex)
-        NSLog("どうした:%d", doshitaIndex)
+        //NSLogの使用変更
+        print("いつ\(itsuIndex)")
+        print("どこで\(dokodeIndex)")
+        print("だれが\(daregaIndex)")
+        print("どうした\(doshitaIndex)")
         
         //それぞれのラベルに配列の要素を追加する
         itsuLabel.text = itsuArray[itsuIndex]
